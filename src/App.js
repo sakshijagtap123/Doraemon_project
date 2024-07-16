@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+
+import Navbar from './Navbar.jsx'
+import Slider from './Slider.jsx'
+import About from './About.jsx'
+import Characters from './Characters.jsx'
+import History from './History.jsx'
+import { useState } from 'react'
+import GadgetGallery from './GadgetGallery.jsx'
+import Footer from './Footer.jsx'
+
+
+
 
 function App() {
+// props drealing
+const [state,setState]=useState("Hello..! I am Doraemon")
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Navbar/>
+    <Slider />
+    <History />
+    <Characters state={state}/>
+    <About />
+    <GadgetGallery />
+    <Footer />
+    
+    
+      
+    </>
   );
 }
 

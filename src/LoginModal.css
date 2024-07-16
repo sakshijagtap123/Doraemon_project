@@ -1,0 +1,32 @@
+/* Center the form elements */
+.modal-body .form-group {
+    margin-bottom: 15px;
+}
+
+/* Style the modal header */
+.modal-header {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Style the modal title */
+.modal-title {
+    margin: 0 auto;
+}
+
+/* Style the submit button */
+.modal-body .btn-primary {
+    width: 100%;
+    background-color: #007bff;
+    border: none;
+}
+
+.modal-body .btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Style for the input fields */
+.modal-body .form-control {
+    border-radius: 0.25rem;
+    padding: 10px;
+}

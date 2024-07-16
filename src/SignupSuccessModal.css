@@ -1,0 +1,9 @@
+.success-message {
+    text-align: center;
+}
+
+.success-icon {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}

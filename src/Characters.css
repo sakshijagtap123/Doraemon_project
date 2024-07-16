@@ -1,0 +1,160 @@
+/* General tab styling */
+.tabs {
+    padding: 10px;
+    border-radius: 5px;
+    margin: 30px;
+}
+
+/* Tab navigation */
+.tab-navigation {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    margin-bottom: 20px;
+}
+
+/* Individual tab styling */
+.tab {
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    transition: background-color 0.3s;
+    flex: 1 1 auto; /* Allow flexible width */
+    text-align: center;
+    margin: 5px; /* Add margin for spacing */
+}
+
+.tab.active {
+    background-color: #e43;
+    color: white;
+}
+
+/* Styling for the content within each tab */
+.tab-content {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    position: relative;
+    padding-left: 30px;
+    flex-wrap: wrap; /* Allow wrapping */
+}
+
+/* Container for the image */
+.tab-image-container {
+    flex: 1;
+    max-width: 50%;
+    position: relative;
+}
+
+.tab-image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+/* Container for the text */
+.tab-text-container {
+    flex: 1;
+    max-width: 50%;
+    padding: 20px;
+    padding-left: 50px;
+}
+
+/* Animation for Doraemon */
+.tab1 .tab-image-container img {
+    animation-name: slideInLeft;
+}
+
+/* Animation for Nobita */
+.tab2 .tab-image-container img {
+    animation-name: slideInRight;
+}
+
+/* Animation for Shizuka */
+.tab3 .tab-image-container img {
+    animation-name: slideInLeft;
+}
+
+/* Animation for Giaan */
+.tab4 .tab-image-container img {
+    animation-name: slideInRight;
+}
+
+/* Animation for Suneo */
+.tab5 .tab-image-container img {
+    animation-name: bounce;
+}
+
+/* Keyframes for animations */
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Add some margin to the bottom for spacing between sections */
+.section + .section {
+    margin-top: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .tab-navigation {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tab-content {
+        flex-direction: column;
+        padding-left: 0;
+    }
+
+    .tab-image-container,
+    .tab-text-container {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .tab-text-container {
+        padding-left: 0;
+        text-align: center; /* Center text on smaller screens */
+    }
+
+    .tab-image-container img {
+        border-radius: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tabs {
+        padding: 5px;
+    }
+
+    .tab-text-container {
+        padding: 5px;
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+
+    .tab-image-container img {
+        border-radius: 5px;
+    }
+}
